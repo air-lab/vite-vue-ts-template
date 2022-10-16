@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"Vue.vscode-typescript-vue-plugin",
+			"dbaeumer.vscode-eslint",
+			"stylelint.vscode-stylelint",
+			"Vue.volar",
+			"EditorConfig.EditorConfig",
+			"VisualStudioExptTeam.vscodeintellicode",
+			"k--kato.intellij-idea-keybindings"
+		]
+	},
+	"settings": {
+		"stylelint.validate": [
+			"vue",
+			"css",
+			"scss",
+			"pcss"
+		],
+		"scss.validate": true,
+		"stylelint.enable": true,
+		"eslint.enable": true,
+		"eslint.format.enable": true,
+		"[typescript]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		},
+		"[vue]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		},
+		"emmet.includeLanguages": {
+			"typescript": "html"
+		},
+		"typescript.tsdk": "node_modules/typescript/lib",
+	}
+}
