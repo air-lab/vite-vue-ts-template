@@ -2,15 +2,67 @@
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
+### Setup Node.js
+
+Install **Node.js** and **PNPM** package manager
+
+Check your platform on the website <https://nodejs.org/en/>. You can download and install a binary installer from the website. For MacOS it can be easily installed by [brew](https://brew.sh).
+
+`brew install node`
+
+Or if you need to manage more node versions - take a look at "Node Version Manager" <https://github.com/nvm-sh/nvm>
+
+### Setup package manager: PNPM (YARN, NPM)
+
+We're using alternative node package manager [pnpm](https://pnpm.js.org/). There is the main reason why we prefer to use it because it reduces `node_modules` size on the disk, has super-fast performance, and compatible with npm.
+
+> **pnpm** creates hard links from the global store to the project's `node_modules` folders. Hard links point to the same place on the disk where the original files are. So, for example, if you have `foo` in your project as a dependency and it occupies 1MB of space, then it will look like it occupies 1MB of space in the project's `node_modules` folder and the same amount of space in the global store. However, that 1MB is the same space on the disk addressed from two different locations. So in total foo occupies 1MB, not 2MB.
+
+
+### Start & Build
+
+```sh
+npm start
+```
+
+```sh
+npm run build
+```
+
+
+To preview your build:
+
+
+```sh
+npm run preview
+```
 ## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) +  [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-## Type Support For `.vue` Imports in TS
+## Auto Formating
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+Install extention
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+- [VS Code](https://code.visualstudio.com/) + [Multi Command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command)
+
+Add custom `VS Code` keybinding to fix Vue files formating.
+
+```json
+[
+    {
+        "key": "alt+cmd+l",
+        "command": "extension.multiCommand.execute",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor",
+        "args": { 
+            "sequence": [
+                "editor.action.formatDocument",
+                "stylelint.executeAutofix"
+            ]
+        },
+        "languages": ["vue"]
+    }
+]
+```
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
