@@ -5,16 +5,26 @@ This template should help get you started developing with Vue 3 and TypeScript i
 ### Setup Node.js
 
 Install **Node.js** and **PNPM** package manager
+Check your platform on the website <https://nodejs.org/en/>. 
 
-Check your platform on the website <https://nodejs.org/en/>. You can download and install a binary installer from the website. For MacOS it can be easily installed by [brew](https://brew.sh).
+You can download and install a binary installer from the website. For MacOS it can be easily installed by [brew](https://brew.sh).
 
-`brew install node`
+
+```sh
+brew install node
+```
+
+or for Microsoft Windows you can use [chocolately](https://chocolatey.org/install)
+
+```sh
+choco install nodejs
+```
 
 Or if you need to manage more node versions - take a look at "Node Version Manager" <https://github.com/nvm-sh/nvm>
 
 ### Setup package manager: PNPM (YARN, NPM)
 
-We're using alternative node package manager [pnpm](https://pnpm.js.org/). There is the main reason why we prefer to use it because it reduces `node_modules` size on the disk, has super-fast performance, and compatible with npm.
+We're using alternative node package manager [pnpm](https://pnpm.io/installation). There is the main reason why we prefer to use it because it reduces `node_modules` size on the disk, has super-fast performance, and compatible with npm.
 
 > **pnpm** creates hard links from the global store to the project's `node_modules` folders. Hard links point to the same place on the disk where the original files are. So, for example, if you have `foo` in your project as a dependency and it occupies 1MB of space, then it will look like it occupies 1MB of space in the project's `node_modules` folder and the same amount of space in the global store. However, that 1MB is the same space on the disk addressed from two different locations. So in total foo occupies 1MB, not 2MB.
 
