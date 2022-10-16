@@ -6,10 +6,12 @@
 	],
 	"extensions": {
 		"recommendations": [
+			"ryuta46.multi-command",
 			"Vue.vscode-typescript-vue-plugin",
 			"dbaeumer.vscode-eslint",
 			"stylelint.vscode-stylelint",
 			"Vue.volar",
+			"vunguyentuan.vscode-css-variables",
 			"EditorConfig.EditorConfig",
 			"VisualStudioExptTeam.vscodeintellicode",
 			"k--kato.intellij-idea-keybindings"
@@ -24,8 +26,12 @@
 		],
 		"scss.validate": true,
 		"stylelint.enable": true,
+		"stylelint.configFile": ".stylelintrc",
 		"eslint.enable": true,
 		"eslint.format.enable": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": true
+		},
 		"[typescript]": {
 			"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 		},
