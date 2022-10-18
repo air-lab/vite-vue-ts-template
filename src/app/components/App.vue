@@ -1,10 +1,14 @@
 <template>
-  <div>some {{ test }}</div>
+  <div class="test">
+    some {{ test }}
+  </div>
 </template>
 <script lang="ts" setup>
   const test = 'test'
 </script>
 <style lang="scss">
+  @use "@assets/style/main";
+
   html,
   body {
     height: 100%;
