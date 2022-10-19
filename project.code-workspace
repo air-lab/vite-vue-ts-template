@@ -24,7 +24,7 @@
 			"scss",
 			"pcss"
 		],
-		"scss.validate": true,
+		"scss.validate": false,
 		"stylelint.enable": true,
 		"stylelint.configFile": ".stylelintrc",
 		"eslint.enable": true,
