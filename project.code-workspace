@@ -7,7 +7,6 @@
 	"extensions": {
 		"recommendations": [
 			"ryuta46.multi-command",
-			"Vue.vscode-typescript-vue-plugin",
 			"dbaeumer.vscode-eslint",
 			"stylelint.vscode-stylelint",
 			"Vue.volar",
@@ -30,7 +29,7 @@
 		"eslint.enable": true,
 		"eslint.format.enable": true,
 		"editor.codeActionsOnSave": {
-			"source.fixAll.stylelint": true
+			"source.fixAll.stylelint": "explicit"
 		},
 		"[typescript]": {
 			"editor.defaultFormatter": "dbaeumer.vscode-eslint"

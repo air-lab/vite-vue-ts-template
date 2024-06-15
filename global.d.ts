@@ -7,8 +7,3 @@ declare type EnvConfig = {
 interface ImportMeta extends EnvConfig {
   readonly env: ImportMetaEnv
 }
-
-declare module '*.vue' {
-  import { defineComponent } from 'vue'
-  export default defineComponent
-}
